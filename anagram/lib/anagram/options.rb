@@ -15,8 +15,7 @@ module Anagram
     def parse(argv)
       OptionParser.new do |opts|
         opts.banner = "Usage: anagram [options] words......"
-        opts.on( "-d", "--dict path", String,
-                 "Path of dictionary") do |dict|
+        opts.on( "-d", "--dict path", String,"Path of dictionary") do |dict|
           @dictionary = dict
         end
         opts.on("-h", "--help",String,"Show this message") do
