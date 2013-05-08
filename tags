@@ -1,0 +1,47 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Anagram	anagram/lib/anagram/finder.rb	/^module Anagram$/;"	m
+Anagram	anagram/lib/anagram/options.rb	/^module Anagram$/;"	m
+Anagram	anagram/lib/anagram/runner.rb	/^module Anagram$/;"	m
+Anagram	anagram/pkg/anagram-0.0.1/lib/anagram/finder.rb	/^module Anagram$/;"	m
+Anagram	anagram/pkg/anagram-0.0.1/lib/anagram/options.rb	/^module Anagram$/;"	m
+Anagram	anagram/pkg/anagram-0.0.1/lib/anagram/runner.rb	/^module Anagram$/;"	m
+Finder	anagram/lib/anagram/finder.rb	/^  class Finder$/;"	c	class:Anagram
+Finder	anagram/pkg/anagram-0.0.1/lib/anagram/finder.rb	/^  class Finder$/;"	c	class:Anagram
+Help	namespace.rb	/^  class Help$/;"	c	class:HelpModule
+HelpModule	namespace.rb	/^module HelpModule$/;"	m
+My_Name	namespace.rb	/^  class My_Name$/;"	c	class:HelpModule
+Options	anagram/lib/anagram/options.rb	/^  class Options$/;"	c	class:Anagram
+Options	anagram/pkg/anagram-0.0.1/lib/anagram/options.rb	/^  class Options$/;"	c	class:Anagram
+Runner	anagram/lib/anagram/runner.rb	/^  class Runner$/;"	c	class:Anagram
+Runner	anagram/pkg/anagram-0.0.1/lib/anagram/runner.rb	/^  class Runner$/;"	c	class:Anagram
+Square	namespace.rb	/^class Square$/;"	c
+TestFinder	anagram/pkg/anagram-0.0.1/test/test_finder.rb	/^class TestFinder < Test::Unit::TestCase$/;"	c
+TestFinder	anagram/test/test_finder.rb	/^class TestFinder < Test::Unit::TestCase$/;"	c
+TestOption	anagram/pkg/anagram-0.0.1/test/test_options.rb	/^class TestOption<Test::Unit::TestCase$/;"	c
+TestOption	anagram/test/test_options.rb	/^class TestOption<Test::Unit::TestCase$/;"	c
+Trangle	namespace.rb	/^class Trangle$/;"	c
+from_file	anagram/lib/anagram/finder.rb	/^    def self.from_file(file_name)$/;"	F	class:Anagram.Finder
+from_file	anagram/pkg/anagram-0.0.1/lib/anagram/finder.rb	/^    def self.from_file(file_name)$/;"	F	class:Anagram.Finder
+help	namespace.rb	/^    def help$/;"	f	class:HelpModule.Help
+initialize	anagram/lib/anagram/finder.rb	/^    def initialize(dictionary_words)$/;"	f	class:Anagram.Finder
+initialize	anagram/lib/anagram/options.rb	/^    def initialize(argv)$/;"	f	class:Anagram.Options
+initialize	anagram/lib/anagram/runner.rb	/^    def initialize(argv)$/;"	f	class:Anagram.Runner
+initialize	anagram/pkg/anagram-0.0.1/lib/anagram/finder.rb	/^    def initialize(dictionary_words)$/;"	f	class:Anagram.Finder
+initialize	anagram/pkg/anagram-0.0.1/lib/anagram/options.rb	/^    def initialize(argv)$/;"	f	class:Anagram.Options
+initialize	anagram/pkg/anagram-0.0.1/lib/anagram/runner.rb	/^    def initialize(argv)$/;"	f	class:Anagram.Runner
+lookup	anagram/lib/anagram/finder.rb	/^    def lookup(word)$/;"	f	class:Anagram.Finder
+lookup	anagram/pkg/anagram-0.0.1/lib/anagram/finder.rb	/^    def lookup(word)$/;"	f	class:Anagram.Finder
+parse	anagram/lib/anagram/options.rb	/^    def parse(argv)$/;"	f	class:Anagram.Options
+parse	anagram/pkg/anagram-0.0.1/lib/anagram/options.rb	/^    def parse(argv)$/;"	f	class:Anagram.Options
+run	anagram/lib/anagram/runner.rb	/^    def run$/;"	f	class:Anagram.Runner
+run	anagram/pkg/anagram-0.0.1/lib/anagram/runner.rb	/^    def run$/;"	f	class:Anagram.Runner
+show_name	namespace.rb	/^   def show_name$/;"	f	class:HelpModule.My_Name
+show_sides	namespace.rb	/^  def show_sides$/;"	f	class:Square
+show_sides	namespace.rb	/^  def show_sides$/;"	f	class:Trangle
+signature_of	anagram/lib/anagram/finder.rb	/^    def self.signature_of(word)$/;"	F	class:Anagram.Finder
+signature_of	anagram/pkg/anagram-0.0.1/lib/anagram/finder.rb	/^    def self.signature_of(word)$/;"	F	class:Anagram.Finder
