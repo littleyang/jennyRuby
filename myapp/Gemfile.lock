@@ -191,6 +191,7 @@ DEPENDENCIES
   rb-fchange
   rb-fsevent
   rb-inotify
+  rspec
   rspec-rails
   sass-rails (~> 3.2.3)
   spork

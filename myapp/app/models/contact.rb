@@ -1,16 +1,7 @@
 class Contact < ActiveRecord::Base
-  attr_accessible :firstname, :lastname
-
-  def name
-    [firstname,lastname].join " "
-  end
-
-  def self.by_letter(letter)
-    where("lastname LIKE ?","#{letter}%").order(:lastname)
-  end
-
-  def Contact.hi_letter(letter)
-    where("lastname LIKE ?","#{letter}%").order(:lastname)
-  end
+  attr_accessible :firstname
+  attr_accessible :lastname
+  validates :firstname,:presence => true
+  validates :lastname,:presence => true
 
 end
