@@ -139,6 +139,18 @@ describe ContactsController do
     #  get :show, {:id => contact.to_param}, valid_session
     #  assigns(:contact).should eq(contact)
     #end
+    it "assign the requested contact to @contact" do
+      contact = FactoryGirl.create(:contact)
+      get :show,id:contact
+      assigns(:contact).should eq(contact)
+      response.code.should eq("200")
+    end
+
+    it "should render the show tempalte" do
+      contact = FactoryGirl.create(:contact)
+      get :show,id:contact
+      response.should render_template :show
+    end
   end
 
   describe "GET new" do
@@ -194,7 +206,44 @@ describe ContactsController do
   end
 
   describe "PUT update" do
+    # set the data using factory-girl
+
+    before :each do
+      @contact = FactoryGirl.create(:contact,firstname:"Low",lastname:"jack")
+    end
+
     describe "with valid params" do
+       it "loacated the requested contact" do
+         put :update,id:@contact,contact:FactoryGirl.attributes_for(:contact,firstname:"zhang",lastname:"jing")
+         assigns(:contact).should eq(@contact)
+       end
+
+       it "update the the attribute" do
+          put :update,id:@contact,contact:FactoryGirl.attributes_for(:contact,firstname:"zhang",lastname:"jing")
+          @contact.reload
+          @contact.firstname.should eq("zhang")
+          @contact.lastname.should eq("jing")
+       end
+
+    describe "with invalid params and should not change the data" do
+      it "loacated the requested the data" do
+        put :update,id:@contact,contact:FactoryGirl.attributes_for(:invlid_contact)
+        assigns(:contact).should eq(@contact)
+      end
+
+      it "should not update the data and render the edit template" do
+        put :update,id:@contact,contact:FactoryGirl.attributes_for(:contact,firstname:"Larry",lastname:nil)
+        @contact.reload
+        @contact.firstname.should eq("Low")
+        @contact.lastname.should eq("jack")
+      end
+
+      it "should render the edit template" do
+        put :update,id:@contact,contact:FactoryGirl.attributes_for(:invlid_contact)
+        response.should render_template :edit
+      end
+    end
+
       #it "updates the requested contact" do
        # contact = Contact.create! valid_attributes
         # Assuming there are no other contacts in the database, this
@@ -238,6 +287,22 @@ describe ContactsController do
   end
 
   describe "DELETE destroy" do
+
+    before :each do
+      @contact = FactoryGirl.create(:contact)
+    end
+
+    it "delete the @contact" do
+      expect{
+        delete :destroy,id:@contact
+      }.to change(Contact,:count).by(-1)
+    end
+
+    it "should rediret to index url after the deletion" do
+      delete :destroy,id:@contact
+      response.should redirect_to contacts_url
+    end
+
     #it "destroys the requested contact" do
     #  contact = Contact.create! valid_attributes
     #  expect {
